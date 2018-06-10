@@ -2,6 +2,7 @@ clear
 clc
 format long
 
+%dane
 a = 14.8;
 b = 10.6;
 c = 15;
@@ -31,6 +32,7 @@ L1 = double(La);
 L2 = double(Lb);
 x1 = double(subs(x1));
 x2 = double(subs(x2));
+
 %w tym miejscu mamy juz L1 L2, i x(L)
 %aby alfa*c = 0 musimy miec L1 * c1 == 0 i L2 * c2 == 0
 %sprawdzenie
@@ -39,5 +41,6 @@ if subs(alfa_c)
    error('Error. \n Warunek alfa * c nie spe³niony')
 end
 
+%wyswietl wyniki
 disp(['x = [' num2str(x1, '%4.3f') ',' num2str(x2, '%4.3f') '], L = [' num2str(L1, '%4.3f')  ', ' num2str(L2, '%4.3f') ']'])
       

@@ -13,6 +13,8 @@ b = x0(2);
 c = x0(3);
 
 g(x1, x2, x3) = gradient(f);
+%przyblizenie poczatkowe- odwrotnosc macierzy hessego
+
 B0 = eye(3);
 i = 0;
 
@@ -47,10 +49,13 @@ while eps < norm
       g0 = g1;
       g1 = g(a, b, c);
       q = g1 - g0;
+      
+      %konwersja do wyswietlenia
       norm = sqrt(g1(1)^2 + g1(2)^2 + g1(3)^2);
       norm = double(norm);
       i = i + 1;
       
+      %wyswietl wyniki
       disp(['x' num2str(i) ' = [' num2str(a, '%4.3f') ',' num2str(b, '%4.3f') ',' num2str(c, '%4.3f') ']; ||grad f(x' num2str(i) ')|| =' num2str(norm, '%4.6f') ])
       
       D = dp' * q;

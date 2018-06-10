@@ -2,6 +2,7 @@ clear
 clc
 format long
 
+%dane
 g_acc = 9.81;
 m1 = 6;
 m2 = 8;
@@ -53,5 +54,6 @@ x2 = 2 * l * sin(xp(1)) + l * sin(xp(2));
 y2 = -2 * l * cos(xp(1)) - l * cos(xp(2));
 phi2 = 270 + xp(2) * 180 / pi;
 
+%wyswietl wyniki
 disp(['q1 = [x1, y1, phi1] = [' num2str(x1, '%4.3f') ', ' num2str(y1, '%4.3f') ', '  num2str(phi1, '%4.3f') ']' ])
 disp(['q2 = [x2, y2, phi2] = [' num2str(x2, '%4.3f') ', ' num2str(y2, '%4.3f') ', '  num2str(phi2, '%4.3f') ']' ])
